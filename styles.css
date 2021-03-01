@@ -10,35 +10,70 @@ providing a space for you to apply styles to your app's outermost HTML element -
 
 #app {
   background-color: white;
-  color: black;
+  color: blue;
 }
 
-.tweet-box {
-  border: 5px solid grey;
-  border-width: thin;
-  padding: 7px;
-  margin: 5px;
+.container {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20% ;
+  grid-template-rows: 40% 10% 10% 10% 30% ;
+  grid-gap: 2px;
+}
+
+.tweet {
+  padding: 25px;
+  margin: 8px;
 }
 
 .profile-photo {
-
+  grid-column: auto;
+  grid-row-start:1;
+  max-width: 100%;
+  height:auto;
+  border: 5px solid grey;
+  border-width: thin;
+  padding: 25px;
+  margin: 8px;
 }
 
 .username {
-
+  grid-column-start:1;
+  grid-row-start:2;
+  padding: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  color: grey;
+  text-align:left;
 }
 
 .message {
-
+  grid-column-start:1;
+  grid-row-start:3;
+  height: 300px;
+  padding: 6px;
+  font-size: 18px;
+  color: grey;
+  text-align:left;
+  overflow: scroll;
 }
 
 .timestamp {
-
+  grid-column: auto;
+  grid-row-start:4;
+  font-size: smaller;
+  padding: 6px;
+  text-align:left;
+  color: grey;
 }
 
 .icon {
-
+  grid-column: auto;
+  grid-row-start:5;
+  max-width: 100%;
+  height:auto;
+  border: 5px solid grey;
+  border-width: thin;
+  padding: 7px;
 }
-
 
 
