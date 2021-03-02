@@ -63,17 +63,16 @@ providing a space for you to apply styles to your app's outermost HTML element -
   font-size: smaller;
   padding: 6px;
   text-align:left;
-  color: grey;
+  color: black;
 }
 
 .icon {
   grid-column: auto;
   grid-row-start:5;
   max-width: 100%;
-  height:auto;
-  border: 5px solid grey;
-  border-width: thin;
-  padding: 7px;
+  size: 7em;
+  height: auto;
+  padding: 15px;
 }
 
 
