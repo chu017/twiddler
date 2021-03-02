@@ -11,7 +11,7 @@ $(document).ready(function(){
 
   // Create new HTML elements
   var $title = $('<h1>Twiddler</h1>');
-  var $button = $('<button id="button">Update Feed</button>');
+  var $button = $('<button id="button" data-text-swap="Update Feed" data-text-original="Back">Update Feed</button>');
   var $tweets = $('<div id="tweets"></div>');
 
 
@@ -27,9 +27,9 @@ $(document).ready(function(){
     alert('The title of this page is: ' + event.target.innerText);
   }
 
-  var handleUsernameClick = function(event) {
-    document.querySelector('#button').innerHTML = 'Back';
-  }
+  // var handleUsernameClick = function(event) {
+  //   document.querySelector('#button').innerHTML = 'Back';
+  // }
 
 
   function updateFeed() {
@@ -117,9 +117,20 @@ $(document).ready(function(){
 
   // Set event listeners (providing appropriate handlers as input)
   $title.on("click", handleTitleClick);
-  $button.on("click", function todo() {
-    handleUsernameClick(); updateFeed();
+
+  $("#button").on("click", function() {
+    var el = $(this);
+    el.text() == el.data("text-swap")
+      ? el.text(el.data("text-original"))
+      : el.text(el.data("text-swap"));
+
+    updateFeed();
+
   });
+
+  // $button.on("click", function todo() {
+  //   handleUsernameClick(); updateFeed();
+  // });
 
 
   // var index = streams.home.length - 1;
